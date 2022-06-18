@@ -9,7 +9,7 @@ const Footer: FC = () => {
     <footer className='py-8 text-white bg-[#3D3D3D]'>
       <div className='flex flex-col justify-center items-center'>
         <Link href='/'>
-          <a>
+          <a className='py-2'>
             <Image src='/images/daikoku-logo2.png' alt='大黒工業ロゴ' width={280} height={70} />
           </a>
         </Link>
@@ -26,7 +26,7 @@ const Footer: FC = () => {
       <div className='flex justify-center items-center py-3 font-medium'>
         {SocialLinks.map((sns) => (
           <a
-            key={sns.icon}
+            key={sns.title}
             aria-label={`${sns.title}へのリンク`}
             target='_blank'
             rel='noopener noreferrer'
