@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <h1>大黒webはここから始まる。</h1>
+    <div className=''>
+      <h1 className=''>大黒webはここから始まる。</h1>
     </div>
   );
 };
