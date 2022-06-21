@@ -9,7 +9,7 @@ const Footer: FC = () => {
     <footer className='py-8 text-white bg-[#3D3D3D]'>
       <div className='flex flex-col justify-center items-center'>
         <Link href='/'>
-          <a className='py-2'>
+          <a className='py-2 hover:opacity-80'>
             <Image src='/images/daikoku-logo2.png' alt='大黒工業ロゴ' width={280} height={70} />
           </a>
         </Link>
@@ -17,7 +17,7 @@ const Footer: FC = () => {
       <div className='flex flex-col justify-center items-center py-3 font-medium sm:flex-row'>
         {headerNavLinks.map((link) => (
           <Link key={link.href} href={link.href}>
-            <a className='py-2 mx-4 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 transition duration-300'>
+            <a className='py-2 mx-4 border-b-2 border-transparent hover:border-white hover:opacity-80 transition duration-300'>
               {link.title}
             </a>
           </Link>
@@ -31,7 +31,7 @@ const Footer: FC = () => {
             target='_blank'
             rel='noopener noreferrer'
             href={sns.href}
-            className='py-2 mx-4 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 transition duration-300'
+            className='py-2 mx-4 border-b-2 border-transparent hover:border-white hover:opacity-80 transition duration-300'
           >
             {sns.title}
           </a>

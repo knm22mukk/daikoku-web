@@ -29,7 +29,7 @@ const MobileNav: FC = () => {
           {headerNavLinks.map((link) => (
             <Link href={link.href} key={link.href}>
               <a
-                className='flex justify-center py-4 text-2xl font-bold tracking-wide hover:text-green-600'
+                className='flex justify-center py-4 text-2xl font-bold tracking-wide hover:opacity-80'
                 onClick={handleClick}
               >
                 {link.title}
