@@ -43,7 +43,7 @@ const BlogId: NextPage<Props> = ({ blog }) => {
         <p className='my-8 text-lg text-right text-gray-600'>
           <Date dateString={blog.publishedAt} />
         </p>
-        <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }} className='' />
+        <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }} className='max-w-none prose' />
         <div className='py-8'>
           <Link href='/news'>
             <a className='py-3 px-5 m-2 text-sm font-bold text-white bg-blue-600 hover:bg-blue-800 rounded-lg'>
