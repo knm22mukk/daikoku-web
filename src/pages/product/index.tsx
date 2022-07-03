@@ -1,8 +1,35 @@
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import Layout from 'components/Layout';
+import { client } from 'libs/client';
+import { Category, Product } from 'types/product';
 
-const index: NextPage = () => {
-  return <Layout>商品情報</Layout>;
+export const getStaticProps: GetStaticProps = async () => {
+  const product = await client.get({ endpoint: 'products' });
+  const category = await client.get({ endpoint: 'categories' });
+
+  return {
+    props: {
+      products: product.contents,
+      categories: category.contents,
+    },
+  };
+};
+
+type Props = {
+  products: Product[];
+  categories: Category[];
+};
+
+const index: NextPage<Props> = ({ products, categories }) => {
+  return (
+    <Layout>
+      <div>
+        {products.map((product) => (
+          <div key={product.id}>{product.name}</div>
+        ))}
+      </div>
+    </Layout>
+  );
 };
 
 export default index;
