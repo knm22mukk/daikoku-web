@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Layout from 'components/Layout';
+import SectionHeader from 'components/SectionHeader';
 import { client } from 'libs/client';
 import { Product } from 'types/product';
 
@@ -25,7 +26,16 @@ type Props = {
 };
 
 const ProductId: NextPage<Props> = ({ product }) => {
-  return <Layout>{product.name}</Layout>;
+  return (
+    <Layout>
+      <SectionHeader subHeading={`商品コード: ${product.id}`} title={product.name} />
+      <div className='container'>
+        <div className=''>
+          <table className=''></table>
+        </div>
+      </div>
+    </Layout>
+  );
 };
 
 export default ProductId;

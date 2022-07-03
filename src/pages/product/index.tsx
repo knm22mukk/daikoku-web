@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import Layout from 'components/Layout';
+import ProductCard from 'components/ProductCard';
 import SectionHeader from 'components/SectionHeader';
 import { client } from 'libs/client';
 import { Category, Product } from 'types/product';
@@ -25,10 +26,18 @@ const index: NextPage<Props> = ({ products, categories }) => {
   return (
     <Layout>
       <SectionHeader subHeading='product' title='商品情報' />
-      <div>
-        {products.map((product) => (
-          <div key={product.id}>{product.name}</div>
-        ))}
+      <div className='container py-8'>
+        <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              href={product.id}
+              name={product.name}
+              image={product.image_1.url}
+              code={product.id}
+            />
+          ))}
+        </div>
       </div>
     </Layout>
   );

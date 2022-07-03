@@ -13,7 +13,7 @@ type Props = {
 const NewsCard: FC<Props> = ({ href, title, image, date }) => {
   return (
     <Link href={`/news/${href}`}>
-      <a className='transition duration-300 hover:scale-105'>
+      <a className='mx-auto transition duration-300 hover:scale-105'>
         <div className='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md'>
           <Image src={image} alt={title} width={384} height={216} className='rounded-t-lg' />
           <div className='p-5'>
