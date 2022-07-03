@@ -1,8 +1,13 @@
 import { NextPage } from 'next';
 import Layout from 'components/Layout';
+import SectionHeader from 'components/SectionHeader';
 
 const index: NextPage = () => {
-  return <Layout>会社情報</Layout>;
+  return (
+    <Layout>
+      <SectionHeader subHeading='conpany' title='会社概要' />
+    </Layout>
+  );
 };
 
 export default index;

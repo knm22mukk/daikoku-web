@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import Layout from 'components/Layout';
+import SectionHeader from 'components/SectionHeader';
 import { client } from 'libs/client';
 import { Category, Product } from 'types/product';
 
@@ -23,6 +24,7 @@ type Props = {
 const index: NextPage<Props> = ({ products, categories }) => {
   return (
     <Layout>
+      <SectionHeader subHeading='product' title='商品情報' />
       <div>
         {products.map((product) => (
           <div key={product.id}>{product.name}</div>

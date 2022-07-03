@@ -10,7 +10,7 @@ const Layout: FC<Props> = ({ children }) => {
   return (
     <>
       <Header />
-      <main className='py-8'>{children}</main>
+      <main className='text-gray-800 bg-gray-50'>{children}</main>
       <Footer />
     </>
   );

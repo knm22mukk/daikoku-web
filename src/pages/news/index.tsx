@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import Layout from 'components/Layout';
+import SectionHeader from 'components/SectionHeader';
 import { client } from 'libs/client';
 import { Blog } from 'types/blog';
 
@@ -20,7 +21,7 @@ type Props = {
 const index: NextPage<Props> = ({ blogs }) => {
   return (
     <Layout>
-      <h1 className=''>更新情報</h1>
+      <SectionHeader subHeading='news' title='更新情報' />
       {blogs.map((blog) => (
         <div key={blog.id}>{blog.title}</div>
       ))}
