@@ -16,7 +16,7 @@ const Header: FC = () => {
         <div className='hidden md:block'>
           {headerNavLinks.map((link) => (
             <Link href={link.href} key={link.href}>
-              <a className='py-2 mx-4 font-semibold border-b-2 border-transparent hover:border-gray-900 hover:opacity-80 transition duration-300'>
+              <a className='py-2 mx-3 font-semibold border-b-2 border-transparent hover:border-gray-900 hover:opacity-80 transition duration-300'>
                 {link.title}
               </a>
             </Link>
