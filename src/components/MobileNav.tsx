@@ -16,7 +16,7 @@ const MobileNav: FC = () => {
         aria-label='モバイルメニュー'
         type='button'
         onClick={handleClick}
-        className='flex items-center text-3xl'
+        className='flex items-center text-3xl text-white'
       >
         {open ? <MdClose /> : <MdMenu />}
       </button>
