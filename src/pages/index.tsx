@@ -1,15 +1,14 @@
 import { NextPage } from 'next';
 
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
+import { PageTemplete } from '@/components/PageTemplete';
 
 const Home: NextPage = () => {
   return (
-    <div className=''>
-      <Header />
-      <h1 className='text-red-500'>tailwindに変更しました</h1>
-      <Footer />
-    </div>
+    <PageTemplete>
+      <div className='h-96'>
+        <h1 className='text-red-500'>tailwindに変更しました</h1>
+      </div>
+    </PageTemplete>
   );
 };
 
