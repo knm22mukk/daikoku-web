@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { AiOutlineArrowUp } from 'react-icons/ai';
 
-export const ReturnToTop: FC = () => {
+export const ReturnTop: FC = () => {
   const [showButton, setShowButton] = useState<boolean>(false);
   const returnTop = (): void => {
     typeof window !== 'undefined' &&
