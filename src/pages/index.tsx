@@ -1,11 +1,7 @@
 import { NextPage } from 'next';
 
 const Home: NextPage = () => {
-  return (
-    <div>
-      <h1>ゼロから作る大黒デモサイト</h1>
-    </div>
-  );
+  return <h1 className='text-red-500 underline'>tailwindに変更しました</h1>;
 };
 
 export default Home;
