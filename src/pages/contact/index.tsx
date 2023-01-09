@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import { FormEvent, useState } from 'react';
 
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { BaseButton } from '@/components/Buttons';
 import { PageHeader } from '@/components/PageHeader';
 import { PageTemplete } from '@/components/PageTemplete';
 import { SEO } from '@/components/SEO';
@@ -110,7 +111,9 @@ const Contact: NextPage = () => {
                 rows={5}
               ></textarea>
             </div>
-            <button type='submit'>送信</button>
+            <div className='flex justify-center'>
+              <BaseButton type='submit'>送信する</BaseButton>
+            </div>
           </form>
         </div>
       </section>

@@ -32,7 +32,7 @@ export const ReturnTop: FC = () => {
       type='button'
       aria-label='トップに戻る'
       onClick={returnTop}
-      className={`fixed right-10 bottom-10 p-4 rounded-full text-white bg-green-600 text-3xl ${
+      className={`fixed right-10 bottom-10 p-4 rounded-full text-white bg-green-500 hover:bg-green-600 text-3xl ${
         showButton ? 'active' : 'hidden'
       }`}
     >
