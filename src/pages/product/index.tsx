@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { PageHeader } from '@/components/PageHeader';
 import { PageTemplete } from '@/components/PageTemplete';
 import { SEO } from '@/components/SEO';
 import { siteData } from '@/data/siteData';
@@ -14,7 +15,7 @@ const Product: NextPage = () => {
         path={`${siteData.url}/product`}
       />
       <Breadcrumb lists={[{ title: '製品一覧' }]} />
-      <h1>商品情報</h1>
+      <PageHeader subHeading='products' title='製品一覧' />
     </PageTemplete>
   );
 };

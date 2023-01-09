@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { PageHeader } from '@/components/PageHeader';
 import { PageTemplete } from '@/components/PageTemplete';
 import { SEO } from '@/components/SEO';
 import { siteData } from '@/data/siteData';
@@ -14,7 +15,7 @@ const Contact: NextPage = () => {
         path={`${siteData.url}/contact`}
       />
       <Breadcrumb lists={[{ title: 'お問い合わせ' }]} />
-      <h1>お問い合わせ</h1>
+      <PageHeader subHeading='contact' title='お問い合わせ' />
     </PageTemplete>
   );
 };

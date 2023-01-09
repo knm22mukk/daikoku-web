@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { PageHeader } from '@/components/PageHeader';
 import { PageTemplete } from '@/components/PageTemplete';
 import { SEO } from '@/components/SEO';
 import { siteData } from '@/data/siteData';
@@ -14,7 +15,7 @@ const News: NextPage = () => {
         path={`${siteData.url}/news`}
       />
       <Breadcrumb lists={[{ title: '更新情報' }]} />
-      <h1>更新情報</h1>
+      <PageHeader subHeading='news' title='更新情報' />
     </PageTemplete>
   );
 };

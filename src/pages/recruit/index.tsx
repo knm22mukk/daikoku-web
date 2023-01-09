@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { PageHeader } from '@/components/PageHeader';
 import { PageTemplete } from '@/components/PageTemplete';
 import { SEO } from '@/components/SEO';
 import { siteData } from '@/data/siteData';
@@ -14,7 +15,7 @@ const Recruit: NextPage = () => {
         path={`${siteData.url}/recruit`}
       />
       <Breadcrumb lists={[{ title: '採用情報' }]} />
-      <h1>採用情報</h1>
+      <PageHeader subHeading='recruit' title='採用情報' />
     </PageTemplete>
   );
 };
