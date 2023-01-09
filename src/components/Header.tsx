@@ -9,7 +9,9 @@ import { pageLinks } from '@/data/pageLinks';
 export const Header: FC = () => {
   return (
     <header className='h-24 flex items-center justify-around bg-[#3D3D3D]'>
-      <Image src='/images/logo.png' width={280} height={70} alt='大黒工業ロゴ' />
+      <Link href='/'>
+        <Image src='/images/logo.png' width={280} height={70} alt='大黒工業ロゴ' />
+      </Link>
       <div className='hidden md:block'>
         <ul className='flex justify-center items-center'>
           {pageLinks.map((link) => (
