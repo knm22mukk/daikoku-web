@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Link from 'next/link';
 
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { PageHeader } from '@/components/PageHeader';
@@ -17,6 +18,17 @@ const Company: NextPage = () => {
 
       <Breadcrumb lists={[{ title: '会社情報' }]} />
       <PageHeader subHeading='company' title='会社情報' />
+      <ul>
+        <li>
+          <Link href='/company/greeting'>代表挨拶</Link>
+        </li>
+        <li>
+          <Link href='/company/offices'>拠点一覧</Link>
+        </li>
+        <li>
+          <Link href='/company/history'>会社沿革</Link>
+        </li>
+      </ul>
     </PageTemplete>
   );
 };
