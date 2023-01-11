@@ -60,24 +60,24 @@ const Company: NextPage = () => {
           </table>
         </div>
         <ul className='flex justify-center'>
-          <Link href='/company/greeting'>
-            <li className='mx-3 hover:opacity-70'>
+          <li className='mx-3 hover:opacity-70'>
+            <Link href='/company/greeting'>
               <Image
                 src='/images/home_image.jpg'
-                width={210}
-                height={210}
+                width={200}
+                height={200}
                 alt='本社イメージ'
                 className='rounded-full'
               />
               <span className='flex justify-center mt-2 text-gray-500'>代表挨拶</span>
-            </li>
-          </Link>
+            </Link>
+          </li>
           <li className='mx-3 hover:opacity-70'>
             <Link href='/company/offices'>
               <Image
                 src='/images/home_image.jpg'
-                width={210}
-                height={210}
+                width={200}
+                height={200}
                 alt='本社イメージ'
                 className='rounded-full'
               />
@@ -88,8 +88,8 @@ const Company: NextPage = () => {
             <Link href='/company/history'>
               <Image
                 src='/images/home_image.jpg'
-                width={210}
-                height={210}
+                width={200}
+                height={200}
                 alt='本社イメージ'
                 className='rounded-full'
               />
