@@ -17,14 +17,14 @@ const offices: NextPage = () => {
       />
       <Breadcrumb lists={[{ title: '会社情報', path: '/company' }, { title: '拠点一覧' }]} />
       <PageHeader subHeading='offices' title='拠点一覧' />
-      <div className='py-8'>
+      <div className='py-8 container max-w-7xl'>
         <p className='mb-8 font-light text-center text-gray-500'>
           大黒工業グループでは、日本全国、及び海外で幅広く活動しております。
           <br />
           こちらでは営業所の拠点一覧と関連企業のご紹介をしております。
         </p>
         {companyData.map((company) => (
-          <div key={company.department.id} className='container'>
+          <div key={company.department.id}>
             <h3 className='my-5 border-l-8 border-indigo-600 font-bold text-3xl p-3'>
               {company.department.name}
             </h3>

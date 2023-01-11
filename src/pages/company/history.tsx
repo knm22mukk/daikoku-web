@@ -17,7 +17,7 @@ const history: NextPage = () => {
       />
       <Breadcrumb lists={[{ title: '会社情報', path: '/company' }, { title: '会社沿革' }]} />
       <PageHeader subHeading='history' title='会社沿革' />
-      <div className='container py-8'>
+      <div className='container py-8 max-w-7xl'>
         <table className='w-full text-sm text-left text-gray-500'>
           {companyHistory.map((history) => (
             <tbody key={history.title}>

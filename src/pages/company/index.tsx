@@ -19,7 +19,7 @@ const Company: NextPage = () => {
 
       <Breadcrumb lists={[{ title: '会社情報' }]} />
       <PageHeader subHeading='company' title='会社情報' />
-      <div className='py-8 container'>
+      <div className='py-8 container max-w-7xl'>
         <div className='container py-8'>
           <h3 className='my-5 border-l-8 border-indigo-600 font-bold text-3xl p-3'>会社概要</h3>
           <table className='w-full text-sm text-left text-gray-500'>
