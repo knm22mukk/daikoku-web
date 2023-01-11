@@ -11,7 +11,7 @@ interface Props {
 
 export const Breadcrumb: FC<Props> = ({ lists }) => {
   return (
-    <nav className='flex px-5 py-3 bg-gray-200' aria-label='Breadcrumb'>
+    <nav className='flex px-2 md:px-5 py-3 bg-gray-200' aria-label='Breadcrumb'>
       <div className='container'>
         <ol className='flex items-center text-sm font-medium text-gray-500'>
           <li>
@@ -39,22 +39,3 @@ export const Breadcrumb: FC<Props> = ({ lists }) => {
     </nav>
   );
 };
-
-// {
-//   lists.map(({ title, path = '/' }, index) => (
-//     <li key={index} className='flex items-center'>
-//       {lists.length - 1 !== index ? (
-//         <>
-//           <Link href={path}>
-//             <a className='text-sm underline hover:text-indigo-600 md:text-base'>{title}</a>
-//           </Link>
-//           <FaChevronRight aria-hidden='true' className='mx-2 text-xs' />
-//         </>
-//       ) : (
-//         <span aria-current='page' className='text-sm md:text-base'>
-//           {title}
-//         </span>
-//       )}
-//     </li>
-//   ));
-// }
