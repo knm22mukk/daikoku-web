@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from 'next';
-import Link from 'next/link';
 
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { NewsCard } from '@/components/NewsCard';
 import { PageHeader } from '@/components/PageHeader';
 import { PageTemplete } from '@/components/PageTemplete';
 import { SEO } from '@/components/SEO';
@@ -26,7 +26,6 @@ interface Props {
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = await client.get({ endpoint: 'news' });
-  console.log(data.contents);
   return {
     props: {
       news: data.contents,
@@ -44,13 +43,19 @@ const News: NextPage<Props> = ({ news }) => {
       />
       <Breadcrumb lists={[{ title: '更新情報' }]} />
       <PageHeader subHeading='news' title='更新情報' />
-      <ul>
-        {news.map((news) => (
-          <li key={news.id}>
-            <Link href={`/news/${news.id}`}>{news.title}</Link>
-          </li>
-        ))}
-      </ul>
+      <div className='py-8 container'>
+        <div className='grid gap-4 py-16 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 place-content-center sm:place-items-stretch'>
+          {news.map((news) => (
+            <NewsCard
+              href={`/news/${news.id}`}
+              key={news.id}
+              image={news.image.url}
+              title={news.title}
+              publishedAt={news.publishedAt}
+            />
+          ))}
+        </div>
+      </div>
     </PageTemplete>
   );
 };
