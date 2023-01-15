@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+    'react/prop-types': 'off',
     'import/order': [
       'error',
       {
