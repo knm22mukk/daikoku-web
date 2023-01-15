@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Image from 'next/image';
 
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { Date } from '@/components/Date';
 import { PageHeader } from '@/components/PageHeader';
 import { PageTemplete } from '@/components/PageTemplete';
 import { SEO } from '@/components/SEO';
@@ -54,7 +55,9 @@ const NewsId: NextPage<Props> = ({ news }) => {
       <PageHeader subHeading='news' title={news.title} />
       <div className='py-8 container'>
         <Image src={news.image.url} height={600} width={1280} alt={news.title} />
-        <p>{news.publishedAt}</p>
+        <p>
+          <Date dateString={news.publishedAt} />
+        </p>
         <div
           dangerouslySetInnerHTML={{
             __html: `${news.body}`,
