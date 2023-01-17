@@ -2,30 +2,34 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-import { Date } from './Date';
+import { Date } from '@/components/Date';
+import { News } from '@/types/News';
 
 interface Props {
-  href: string;
-  image: string;
-  title: string;
-  publishedAt: string;
+  news: News;
 }
 
-export const NewsCard: FC<Props> = ({ href, image, title, publishedAt }) => {
+export const NewsCard: FC<Props> = ({ news }) => {
   return (
     <div className='max-w-sm bg-white border border-gray-200 rounded-md shadow-md'>
-      <Link href={href}>
-        <Image src={image} alt='blogimage' width={384} height={195} className='rounded-t-md' />
+      <Link href={`/news/${news.id}`}>
+        <Image
+          src={news.image.url}
+          alt='blogimage'
+          width={384}
+          height={195}
+          className='rounded-t-md'
+        />
       </Link>
       <div className='p-5'>
         <div className='my-3 italic font-semibold text-gray-600'>
-          <Date dateString={publishedAt} />
+          <Date dateString={news.publishedAt} />
         </div>
         <Link
-          href={href}
+          href={`/news/${news.id}`}
           className='text-xl font-bold text-gray-800 hover:underline hover:opacity-80'
         >
-          {title}
+          {news.title}
         </Link>
       </div>
     </div>
