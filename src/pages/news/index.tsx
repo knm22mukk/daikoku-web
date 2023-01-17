@@ -7,25 +7,14 @@ import { PageTemplete } from '@/components/PageTemplete';
 import { SEO } from '@/components/SEO';
 import { siteData } from '@/data/siteData';
 import { client } from '@/libs/client';
+import { News } from '@/types/News';
 
 interface Props {
-  news: Array<{
-    id: string;
-    title: string;
-    description: string;
-    body: string;
-    image: {
-      url: string;
-    };
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    revisedAt: string;
-  }>;
+  news: News[];
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await client.get({ endpoint: 'news' });
+  const data = await client.getList<News>({ endpoint: 'news', queries: { limit: 12 } });
   return {
     props: {
       news: data.contents,
@@ -33,7 +22,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const News: NextPage<Props> = ({ news }) => {
+const NewsIndex: NextPage<Props> = ({ news }) => {
   return (
     <PageTemplete>
       <SEO
@@ -46,13 +35,7 @@ const News: NextPage<Props> = ({ news }) => {
       <div className='py-8 container'>
         <div className='grid gap-4 py-16 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 place-content-center sm:place-items-stretch'>
           {news.map((news) => (
-            <NewsCard
-              href={`/news/${news.id}`}
-              key={news.id}
-              image={news.image.url}
-              title={news.title}
-              publishedAt={news.publishedAt}
-            />
+            <NewsCard key={news.id} news={news} />
           ))}
         </div>
       </div>
@@ -60,4 +43,4 @@ const News: NextPage<Props> = ({ news }) => {
   );
 };
 
-export default News;
+export default NewsIndex;
