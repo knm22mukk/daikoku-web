@@ -13,7 +13,10 @@ export const Breadcrumb: FC<Props> = ({ lists }) => {
   return (
     <nav className='flex px-2 md:px-5 py-3 bg-gray-200' aria-label='Breadcrumb'>
       <div className='container'>
-        <ol className='flex items-center text-sm font-medium text-gray-500'>
+        <ol
+          className='flex items-center text-sm font-medium text-gray-500 overflow-x-auto whitespace-nowrap'
+          aria-label='breadcrumb'
+        >
           <li>
             <Link href='/' className='flex items-center hover:text-gray-900 hover:underline'>
               <AiOutlineHome className='mr-2' />
