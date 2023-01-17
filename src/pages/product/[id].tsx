@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Image from 'next/image';
 import React from 'react';
 
+import { PageTemplete } from '@/components/PageTemplete';
 import { client } from '@/libs/client';
 import { Product } from '@/types/Product';
 
@@ -28,16 +29,18 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const ProductId: NextPage<Props> = ({ product }) => {
   return (
-    <div className='container py-8'>
-      <div>{product.id}</div>
-      <div>{product.name}</div>
-      <div>{product.material}</div>
-      <div>{product.size}</div>
-      <div>{product.quantity}</div>
-      <div>{product.description}</div>
-      <div>{product.is_newitem}</div>
-      <Image src={product.image.url} width={500} height={500} alt={product.name} />
-    </div>
+    <PageTemplete>
+      <div className='container py-8'>
+        <div>{product.id}</div>
+        <div>{product.name}</div>
+        <div>{product.material}</div>
+        <div>{product.size}</div>
+        <div>{product.quantity}</div>
+        <div>{product.description}</div>
+        <div>{product.is_newitem}</div>
+        <Image src={product.image.url} width={500} height={500} alt={product.name} />
+      </div>
+    </PageTemplete>
   );
 };
 
