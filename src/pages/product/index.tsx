@@ -11,21 +11,23 @@ import { Category, Product } from '@/types/Product';
 
 interface Props {
   products: Product[];
-  category: Category[];
+  categories: Category[];
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await client.getList({ endpoint: 'products' });
-  const categoryData = await client.getList({ endpoint: 'categories' });
+  const categoryData = await client.getList<Category>({
+    endpoint: 'categories',
+    queries: { limit: 1000 },
+  });
+  console.log(categoryData);
   return {
     props: {
-      products: data.contents,
-      category: categoryData.contents,
+      categories: categoryData.contents,
     },
   };
 };
 
-const ProductIndex: NextPage<Props> = ({ products, category }) => {
+const ProductIndex: NextPage<Props> = ({ categories }) => {
   return (
     <PageTemplete>
       <SEO
@@ -37,17 +39,9 @@ const ProductIndex: NextPage<Props> = ({ products, category }) => {
       <PageHeader subHeading='products' title='製品一覧' />
       <div className='container py-8'>
         <ul>
-          {category.map((category) => (
+          {categories.map((category) => (
             <li key={category.id}>
               <Link href={`product/category/${category.id}`}>{category.name}</Link>
-            </li>
-          ))}
-        </ul>
-        <hr />
-        <ul>
-          {products.map((product) => (
-            <li key={product.id}>
-              <Link href={`/product/${product.id}`}>{product.name}</Link>
             </li>
           ))}
         </ul>

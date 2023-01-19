@@ -5,7 +5,7 @@ export interface Product {
   size: string;
   quantity: string;
   description: string;
-  image: {
+  image?: {
     url: string;
   };
   is_newitem: boolean;
