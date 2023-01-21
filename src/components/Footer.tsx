@@ -15,7 +15,7 @@ export const Footer: FC = () => {
         </div>
         <ul className='flex flex-col md:flex-row justify-center items-center'>
           {pageLinks.map((link) => (
-            <li key={link.href} className='m-3 hover:underline text-gray-400'>
+            <li key={link.href} className='m-3 hover:underline text-gray-300'>
               <Link href={link.href}>{link.title}</Link>
             </li>
           ))}
@@ -23,7 +23,7 @@ export const Footer: FC = () => {
         <hr className='my-6 border-gray-200' />
         <div className='flex flex-col md:flex-row items-center justify-around'>
           <Link href='/privacy'>
-            <span className='text-gray-400 hover:underline'>プライバシーポリシー</span>
+            <span className='text-gray-300 hover:underline'>プライバシーポリシー</span>
           </Link>
           <span className='text-sm text-gray-300 mt-3 md:mt-0'>
             © 2023 Daikoku Industry.co.ltd. All rights reserved.

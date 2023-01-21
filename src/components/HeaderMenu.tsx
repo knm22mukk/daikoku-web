@@ -10,7 +10,7 @@ export const HeaderMenu: FC = () => {
     setOpen(!open);
   };
   return (
-    <div className='mx-3 md:hidden'>
+    <div className='mx-3 lg:hidden'>
       <div className='flex items-center'>
         <button
           type='button'

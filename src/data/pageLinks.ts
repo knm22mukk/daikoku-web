@@ -13,6 +13,10 @@ export const pageLinks: PageLinks[] = [
     title: '製品一覧',
   },
   {
+    href: '/catalog',
+    title: 'カタログ一覧',
+  },
+  {
     href: '/news',
     title: '更新情報',
   },

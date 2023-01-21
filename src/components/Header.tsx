@@ -12,7 +12,7 @@ export const Header: FC = () => {
       <Link href='/'>
         <Image src='/images/logo.png' width={280} height={70} alt='大黒工業ロゴ' />
       </Link>
-      <div className='hidden md:block'>
+      <div className='hidden lg:block'>
         <ul className='flex justify-center items-center'>
           {pageLinks.map((link) => (
             <li

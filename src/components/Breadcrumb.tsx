@@ -14,7 +14,7 @@ export const Breadcrumb: FC<Props> = ({ lists }) => {
     <nav className='flex px-2 md:px-5 py-3 bg-gray-200' aria-label='Breadcrumb'>
       <div className='container'>
         <ol
-          className='flex items-center text-sm font-medium text-gray-500 overflow-x-auto whitespace-nowrap'
+          className='flex items-center text-sm font-medium text-gray-600 overflow-x-auto whitespace-nowrap'
           aria-label='breadcrumb'
         >
           <li>
