@@ -37,7 +37,7 @@ const ProductIndex: NextPage<Props> = ({ categories }) => {
       />
       <Breadcrumb lists={[{ title: '製品一覧' }]} />
       <PageHeader subHeading='products' title='製品一覧' />
-      <div className='container py-8'>
+      <div className='container py-8 max-w-7xl'>
         <ul>
           {categories.map((category) => (
             <li key={category.id}>

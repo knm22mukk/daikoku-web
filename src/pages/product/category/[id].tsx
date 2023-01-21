@@ -56,7 +56,7 @@ const CategoryId: NextPage<Props> = ({ products, categoryId, categoryName }) => 
       />
       <Breadcrumb lists={[{ title: '製品一覧', path: '/product' }, { title: categoryName }]} />
       <PageHeader subHeading='products' title={`${categoryName}の商品一覧`} />
-      <div className='container py-8'>
+      <div className='container py-8 max-w-7xl'>
         <ul>
           {products.map((product) => (
             <li key={product.id}>

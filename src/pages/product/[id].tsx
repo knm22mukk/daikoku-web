@@ -43,7 +43,7 @@ const ProductId: NextPage<Props> = ({ product }) => {
       />
       <Breadcrumb lists={[{ title: '製品一覧', path: '/product' }, { title: product.name }]} />
       <PageHeader subHeading='products' title={product.name} />
-      <div className='container py-8'>
+      <div className='container py-8 max-w-7xl'>
         <div>{product.id}</div>
         <div>{product.name}</div>
         <div>{product.material}</div>
