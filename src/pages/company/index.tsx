@@ -40,7 +40,7 @@ const Company: NextPage = () => {
               <td className='px-1 md:px-6 py-4 w-2/3'>6月末日</td>
             </tr>
             <tr className='hover:bg-white border-b'>
-              <td className='px-1 md:px-6 py-4 w-1/3'>年商</td>
+              <td className='px-1 md:px-6 py-4 w-1/3'>資本金</td>
               <td className='px-1 md:px-6 py-4 w-2/3'>3億5,300万円</td>
             </tr>
             <tr className='hover:bg-white border-b'>
