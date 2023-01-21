@@ -11,8 +11,8 @@ interface Props {
 
 export const Breadcrumb: FC<Props> = ({ lists }) => {
   return (
-    <nav className='flex px-2 md:px-5 py-3 bg-gray-200' aria-label='Breadcrumb'>
-      <div className='container'>
+    <nav className='flex py-3 bg-gray-200' aria-label='Breadcrumb'>
+      <div className='container max-w-7xl'>
         <ol
           className='flex items-center text-sm font-medium text-gray-600 overflow-x-auto whitespace-nowrap'
           aria-label='breadcrumb'

@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -57,10 +58,46 @@ const CategoryId: NextPage<Props> = ({ products, categoryId, categoryName }) => 
       <Breadcrumb lists={[{ title: '製品一覧', path: '/product' }, { title: categoryName }]} />
       <PageHeader subHeading='products' title={`${categoryName}の商品一覧`} />
       <div className='container py-8 max-w-7xl'>
-        <ul>
+        <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
           {products.map((product) => (
-            <li key={product.id}>
-              <Link href={`/product/${product.id}`}>{product.name}</Link>
+            <li key={product.id} className='w-full max-w-sm flex justify-around items-around'>
+              <div className='bg-white rounded-lg shadow-md'>
+                <Link href={`/product/${product.id}`}>
+                  {product.image != null ? (
+                    <Image
+                      src={product.image.url}
+                      width={400}
+                      height={400}
+                      alt={product.name}
+                      className='p-4 rounded-t-lg hover:opacity-70'
+                    />
+                  ) : (
+                    <Image
+                      src='/images/dammy400x400.png'
+                      width={400}
+                      height={400}
+                      alt={product.name}
+                      className='p-4 rounded-t-lg hover:opacity-70'
+                    />
+                  )}
+                </Link>
+                <div className='p-4 text-gray-700 h-24'>
+                  <span>{product.id}</span>
+                  <h4 className='text-xl font-bold tracking-tight hover:opacity-70 hover:underline'>
+                    <Link href={`/product/${product.id}`}>{product.name}</Link>
+                  </h4>
+                </div>
+                <div className='p-4 flex'>
+                  {product.is_newitem && (
+                    <span className='bg-yellow-100 text-yellow-800 text-xs font-bold mr-2 px-3 py-1 rounded-full'>
+                      新商品
+                    </span>
+                  )}
+                  <span className='bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1 rounded-full'>
+                    {categoryName}
+                  </span>
+                </div>
+              </div>
             </li>
           ))}
         </ul>
