@@ -18,7 +18,7 @@ const greeting: NextPage = () => {
 
       <Breadcrumb lists={[{ title: '会社情報', path: '/company' }, { title: '代表挨拶' }]} />
       <PageHeader subHeading='greeting' title='代表挨拶' />
-      <div className='container py-8 max-w-7xl'>
+      <div className='container py-16 max-w-7xl'>
         <div className='flex justify-center'>
           <Image src='/images/company-image.jpeg' width={640} height={480} alt='本社イメージ' />
         </div>

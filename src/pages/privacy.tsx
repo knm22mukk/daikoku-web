@@ -16,7 +16,7 @@ const Privacy: NextPage = () => {
       />
       <Breadcrumb lists={[{ title: 'プライバシーポリシー' }]} />
       <PageHeader subHeading='privacy policy' title='プライバシーポリシー' />
-      <div className='container py-8 max-w-7xl'>
+      <div className='container py-16 max-w-7xl'>
         <h4 className='my-5 border-l-8 border-indigo-600 font-bold text-2xl p-3'>個人情報とは</h4>
         <p className='text-gray-500 my-3'>
           「個人情報」とは、その情報に係わる個人を識別する情報、またはそれを使用することにより、その個人を識別できるすべての情報を指しています。

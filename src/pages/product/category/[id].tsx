@@ -44,7 +44,7 @@ const CategoryId: NextPage<Props> = ({ products, categoryId, categoryName }) => 
   if (products.length === 0) {
     return (
       <PageTemplete>
-        <div className='container py-8'>まだ商品が登録されていません。</div>
+        <div className='container py-16'>まだ商品が登録されていません。</div>
       </PageTemplete>
     );
   }
@@ -57,7 +57,7 @@ const CategoryId: NextPage<Props> = ({ products, categoryId, categoryName }) => 
       />
       <Breadcrumb lists={[{ title: '製品一覧', path: '/product' }, { title: categoryName }]} />
       <PageHeader subHeading='products' title={`${categoryName}の商品一覧`} />
-      <div className='container py-8 max-w-7xl'>
+      <div className='container py-16 max-w-7xl'>
         <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
           {products.map((product) => (
             <li key={product.id} className='w-full max-w-sm flex justify-around items-around'>

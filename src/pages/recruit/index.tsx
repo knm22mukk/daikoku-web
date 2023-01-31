@@ -18,7 +18,7 @@ const Recruit: NextPage = () => {
       />
       <Breadcrumb lists={[{ title: '採用情報' }]} />
       <PageHeader subHeading='recruit' title='採用情報' />
-      <div className='container py-8 max-w-7xl'>
+      <div className='container py-16 max-w-7xl'>
         <section className='text-gray-600 body-font'>
           <p className='text-base leading-relaxed w-3/4 mx-auto text-gray-500 my-10'>
             私たちの仕事は、世の中になくてはならない商品を開発し流通させることです。
