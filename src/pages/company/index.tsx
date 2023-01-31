@@ -19,7 +19,7 @@ const Company: NextPage = () => {
 
       <Breadcrumb lists={[{ title: '会社情報' }]} />
       <PageHeader subHeading='company' title='会社情報' />
-      <div className='py-8 container max-w-7xl'>
+      <div className='py-16 container max-w-7xl'>
         <h3 className='my-5 border-l-8 border-indigo-600 font-bold text-3xl p-3'>会社概要</h3>
         <table className='w-full text-sm text-left text-gray-500'>
           <tbody>
@@ -57,45 +57,45 @@ const Company: NextPage = () => {
             </tr>
           </tbody>
         </table>
+        <ul className='flex justify-center pt-16'>
+          <li className='mx-3 hover:opacity-70'>
+            <Link href='/company/greeting'>
+              <Image
+                src='/images/home_image.jpg'
+                width={200}
+                height={200}
+                alt='本社イメージ'
+                className='rounded-full'
+              />
+              <span className='flex justify-center mt-2 text-gray-500'>代表挨拶</span>
+            </Link>
+          </li>
+          <li className='mx-3 hover:opacity-70'>
+            <Link href='/company/offices'>
+              <Image
+                src='/images/home_image.jpg'
+                width={200}
+                height={200}
+                alt='本社イメージ'
+                className='rounded-full'
+              />
+              <span className='flex justify-center mt-2 text-gray-500'>拠点一覧</span>
+            </Link>
+          </li>
+          <li className='mx-3 hover:opacity-70'>
+            <Link href='/company/history'>
+              <Image
+                src='/images/home_image.jpg'
+                width={200}
+                height={200}
+                alt='本社イメージ'
+                className='rounded-full'
+              />
+              <span className='flex justify-center mt-2 text-gray-500'>会社沿革</span>
+            </Link>
+          </li>
+        </ul>
       </div>
-      <ul className='flex justify-center'>
-        <li className='mx-3 hover:opacity-70'>
-          <Link href='/company/greeting'>
-            <Image
-              src='/images/home_image.jpg'
-              width={200}
-              height={200}
-              alt='本社イメージ'
-              className='rounded-full'
-            />
-            <span className='flex justify-center mt-2 text-gray-500'>代表挨拶</span>
-          </Link>
-        </li>
-        <li className='mx-3 hover:opacity-70'>
-          <Link href='/company/offices'>
-            <Image
-              src='/images/home_image.jpg'
-              width={200}
-              height={200}
-              alt='本社イメージ'
-              className='rounded-full'
-            />
-            <span className='flex justify-center mt-2 text-gray-500'>拠点一覧</span>
-          </Link>
-        </li>
-        <li className='mx-3 hover:opacity-70'>
-          <Link href='/company/history'>
-            <Image
-              src='/images/home_image.jpg'
-              width={200}
-              height={200}
-              alt='本社イメージ'
-              className='rounded-full'
-            />
-            <span className='flex justify-center mt-2 text-gray-500'>会社沿革</span>
-          </Link>
-        </li>
-      </ul>
     </PageTemplete>
   );
 };
