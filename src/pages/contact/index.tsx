@@ -31,7 +31,7 @@ const Contact: NextPage = () => {
       />
       <Breadcrumb lists={[{ title: 'お問い合わせ' }]} />
       <PageHeader subHeading='contact' title='お問い合わせ' />
-      <div className='py-8 container max-w-7xl'>
+      <div className='py-16 container max-w-7xl'>
         <p className='mb-8 font-light text-center text-gray-500'>
           お問い合わせがありましたらお気軽にこちらからご連絡下さい。
           <br />

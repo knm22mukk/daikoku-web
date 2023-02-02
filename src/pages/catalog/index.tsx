@@ -19,7 +19,7 @@ const index: NextPage = () => {
       />
       <Breadcrumb lists={[{ title: 'カタログ一覧' }]} />
       <PageHeader subHeading='catalog' title='カタログ一覧' />
-      <div className='container py-8 max-w-7xl'>
+      <div className='container py-16 max-w-7xl'>
         <div className='flex flex-wrap'>
           {catalogData.map((catalog, index) => (
             <div key={index} className='p-4 lg:w-1/2 md:w-full'>

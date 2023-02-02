@@ -43,8 +43,8 @@ const ProductId: NextPage<Props> = ({ product }) => {
         path={`${siteData.url}/product//${product.id}`}
       />
       <Breadcrumb lists={[{ title: '製品一覧', path: '/product' }, { title: product.name }]} />
-      <PageHeader subHeading='products' title={product.name} />
-      <div className='container py-8 max-w-6xl'>
+      <PageHeader subHeading='products' title='商品詳細' />
+      <div className='container py-16 max-w-6xl'>
         <div className='flex justify-center flex-wrap'>
           <div className='lg:w-1/3 my-5 lg:my-0'>
             {product.image != null ? (

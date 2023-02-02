@@ -17,7 +17,7 @@ const offices: NextPage = () => {
       />
       <Breadcrumb lists={[{ title: '会社情報', path: '/company' }, { title: '拠点一覧' }]} />
       <PageHeader subHeading='offices' title='拠点一覧' />
-      <div className='py-8 container max-w-7xl'>
+      <div className='py-16 container max-w-7xl'>
         <p className='mb-8 font-light text-center text-gray-500'>
           大黒工業グループでは、日本全国、及び海外で幅広く活動しております。
           <br />
