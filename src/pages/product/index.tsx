@@ -20,7 +20,6 @@ export const getStaticProps: GetStaticProps = async () => {
     endpoint: 'categories',
     queries: { limit: 1000 },
   });
-  console.log(categoryData);
   return {
     props: {
       categories: categoryData.contents,

@@ -1,11 +1,9 @@
 import { FC } from 'react';
 import { AiOutlineInstagram, AiOutlineTwitter, AiOutlineYoutube } from 'react-icons/ai';
 
-import { BaseButton } from './Buttons';
-
 export const Cta: FC = () => {
   return (
-    <section className='my-8'>
+    <section className='my-16'>
       <div className='py-16 bg-gray-300 max-w-7xl container rounded-lg'>
         <div className='px-4 mx-auto text-center sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl'>
@@ -21,23 +19,28 @@ export const Cta: FC = () => {
               href='https://www.instagram.com/daikoku1950_official/'
               target='_blank'
               rel='noreferrer'
+              className='text-white bg-[#f1224d] hover:bg-[#f1224d]/90 font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2'
             >
-              <BaseButton type='button'>
-                <AiOutlineInstagram className='mr-2 inline-flex w-7 h-7 items-center' />
-                Instagram
-              </BaseButton>
+              <AiOutlineInstagram className='mr-2 w-7 h-7' />
+              Instagram
             </a>
-            <a href='https://twitter.com/daikoku_office' target='_blank' rel='noreferrer'>
-              <BaseButton type='button'>
-                <AiOutlineTwitter className='mr-2 inline-flex w-7 h-7 items-center' />
-                Twitter
-              </BaseButton>
+            <a
+              href='https://twitter.com/daikoku_office'
+              target='_blank'
+              rel='noreferrer'
+              className='text-white bg-[#1da1f2] hover:bg-[#1da1f2]/90 font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2'
+            >
+              <AiOutlineTwitter className='w-7 h-7 mr-2' />
+              Twitter
             </a>
-            <a href='https://www.youtube.com/@daikoku_industry' target='_blank' rel='noreferrer'>
-              <BaseButton type='button'>
-                <AiOutlineYoutube className='mr-2 inline-flex w-7 h-7 items-center' />
-                Youtube
-              </BaseButton>
+            <a
+              href='https://www.youtube.com/@daikoku_industry'
+              target='_blank'
+              rel='noreferrer'
+              className='text-white bg-[#FF0000] hover:bg-[#FF0000]/90 font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2'
+            >
+              <AiOutlineYoutube className='mr-2 inline-flex w-7 h-7 items-center' />
+              Youtube
             </a>
           </div>
         </div>
