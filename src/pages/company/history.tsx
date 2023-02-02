@@ -17,13 +17,13 @@ const history: NextPage = () => {
       />
       <Breadcrumb lists={[{ title: '会社情報', path: '/company' }, { title: '会社沿革' }]} />
       <PageHeader subHeading='history' title='会社沿革' />
-      <div className='container py-16 max-w-7xl'>
-        <table className='w-full text-sm text-left text-gray-500'>
+      <div className='container max-w-7xl py-16'>
+        <table className='w-full text-left text-sm text-gray-500'>
           {companyHistory.map((history) => (
             <tbody key={history.title}>
-              <tr className='hover:bg-white border-b'>
-                <td className='px-1 md:px-6 py-4 w-1/3'>{history.date}</td>
-                <td className='px-1 md:px-6 py-4 w-2/3'>{history.title}</td>
+              <tr className='border-b hover:bg-white'>
+                <td className='w-1/3 px-1 py-4 md:px-6'>{history.date}</td>
+                <td className='w-2/3 px-1 py-4 md:px-6'>{history.title}</td>
               </tr>
             </tbody>
           ))}

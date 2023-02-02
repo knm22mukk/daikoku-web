@@ -57,11 +57,11 @@ const CategoryId: NextPage<Props> = ({ products, categoryId, categoryName }) => 
       />
       <Breadcrumb lists={[{ title: '製品一覧', path: '/product' }, { title: categoryName }]} />
       <PageHeader subHeading='products' title={`${categoryName}の商品一覧`} />
-      <div className='container py-16 max-w-7xl'>
-        <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+      <div className='container max-w-7xl py-16'>
+        <ul className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
           {products.map((product) => (
-            <li key={product.id} className='w-full max-w-sm flex justify-around items-around'>
-              <div className='bg-white rounded-lg shadow-md'>
+            <li key={product.id} className='flex w-full max-w-sm justify-around'>
+              <div className='rounded-lg bg-white shadow-md'>
                 <Link href={`/product/${product.id}`}>
                   {product.image != null ? (
                     <Image
@@ -69,7 +69,7 @@ const CategoryId: NextPage<Props> = ({ products, categoryId, categoryName }) => 
                       width={400}
                       height={400}
                       alt={product.name}
-                      className='p-4 rounded-t-lg hover:opacity-70'
+                      className='rounded-t-lg p-4 hover:opacity-70'
                     />
                   ) : (
                     <Image
@@ -77,23 +77,23 @@ const CategoryId: NextPage<Props> = ({ products, categoryId, categoryName }) => 
                       width={400}
                       height={400}
                       alt={product.name}
-                      className='p-4 rounded-t-lg hover:opacity-70'
+                      className='rounded-t-lg p-4 hover:opacity-70'
                     />
                   )}
                 </Link>
-                <div className='p-4 text-gray-700 h-24'>
+                <div className='h-24 p-4 text-gray-700'>
                   <span>{product.id}</span>
-                  <h4 className='text-xl font-bold tracking-tight hover:opacity-70 hover:underline'>
+                  <h4 className='text-xl font-bold tracking-tight hover:underline hover:opacity-70'>
                     <Link href={`/product/${product.id}`}>{product.name}</Link>
                   </h4>
                 </div>
-                <div className='p-4 flex'>
+                <div className='flex p-4'>
                   {product.is_newitem && (
-                    <span className='bg-yellow-100 text-yellow-800 text-xs font-bold mr-2 px-3 py-1 rounded-full'>
+                    <span className='mr-2 rounded-full bg-yellow-100 px-3 py-1 text-xs font-bold text-yellow-800'>
                       新商品
                     </span>
                   )}
-                  <span className='bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1 rounded-full'>
+                  <span className='rounded-full bg-yellow-100 px-3 py-1 text-xs font-bold text-yellow-800'>
                     {categoryName}
                   </span>
                 </div>

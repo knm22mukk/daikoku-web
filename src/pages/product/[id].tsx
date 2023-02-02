@@ -44,16 +44,16 @@ const ProductId: NextPage<Props> = ({ product }) => {
       />
       <Breadcrumb lists={[{ title: '製品一覧', path: '/product' }, { title: product.name }]} />
       <PageHeader subHeading='products' title='商品詳細' />
-      <div className='container py-16 max-w-6xl'>
-        <div className='flex justify-center flex-wrap'>
-          <div className='lg:w-1/3 my-5 lg:my-0'>
+      <div className='container max-w-6xl py-16'>
+        <div className='flex flex-wrap justify-center'>
+          <div className='my-5 lg:my-0 lg:w-1/3'>
             {product.image != null ? (
               <Image
                 src={product.image.url}
                 width={400}
                 height={400}
                 alt={product.name}
-                className='object-cover object-center rounded'
+                className='rounded object-cover object-center'
               />
             ) : (
               <Image
@@ -61,48 +61,48 @@ const ProductId: NextPage<Props> = ({ product }) => {
                 width={400}
                 height={400}
                 alt={product.name}
-                className='object-cover object-center rounded'
+                className='rounded object-cover object-center'
               />
             )}
           </div>
-          <div className='lg:w-2/3 lg:pl-10 mt-6 lg:mt-0'>
+          <div className='mt-6 lg:mt-0 lg:w-2/3 lg:pl-10'>
             <span className='text-lg text-gray-500'>商品コード：{product.id}</span>
-            <h1 className='text-gray-900 text-3xl font-bold py-3'>{product.name}</h1>
+            <h1 className='py-3 text-3xl font-bold text-gray-900'>{product.name}</h1>
             {product.is_newitem && (
-              <span className='bg-orange-500 text-white text-lg font-bold  px-4 py-2 rounded'>
+              <span className='rounded bg-orange-500 px-4 py-2  text-lg font-bold text-white'>
                 新商品
               </span>
             )}
             <div className='mt-3 w-full'>
-              <table className='text-sm text-left text-gray-500'>
+              <table className='text-left text-sm text-gray-500'>
                 <tbody>
-                  <tr className='hover:bg-white border-b'>
-                    <td className='px-1 md:px-6 py-4 w-1/3'>素材</td>
-                    <td className='px-1 md:px-6 py-4 w-2/3'>{product.material}</td>
+                  <tr className='border-b hover:bg-white'>
+                    <td className='w-1/3 px-1 py-4 md:px-6'>素材</td>
+                    <td className='w-2/3 px-1 py-4 md:px-6'>{product.material}</td>
                   </tr>
-                  <tr className='hover:bg-white border-b'>
-                    <td className='px-1 md:px-6 py-4 w-1/3'>サイズ</td>
-                    <td className='px-1 md:px-6 py-4 w-2/3'>{product.size}</td>
+                  <tr className='border-b hover:bg-white'>
+                    <td className='w-1/3 px-1 py-4 md:px-6'>サイズ</td>
+                    <td className='w-2/3 px-1 py-4 md:px-6'>{product.size}</td>
                   </tr>
-                  <tr className='hover:bg-white border-b'>
-                    <td className='px-1 md:px-6 py-4 w-1/3'>入り数</td>
-                    <td className='px-1 md:px-6 py-4 w-2/3'>{product.quantity}</td>
+                  <tr className='border-b hover:bg-white'>
+                    <td className='w-1/3 px-1 py-4 md:px-6'>入り数</td>
+                    <td className='w-2/3 px-1 py-4 md:px-6'>{product.quantity}</td>
                   </tr>
-                  <tr className='hover:bg-white border-b'>
-                    <td className='px-1 md:px-6 py-4 w-1/3'>商品説明</td>
+                  <tr className='border-b hover:bg-white'>
+                    <td className='w-1/3 px-1 py-4 md:px-6'>商品説明</td>
                     <td
-                      className='px-1 md:px-6 py-4 w-2/3'
+                      className='w-2/3 px-1 py-4 md:px-6'
                       dangerouslySetInnerHTML={{
                         __html: `${product.description}`,
                       }}
                     />
                   </tr>
-                  <tr className='hover:bg-white border-b'>
-                    <td className='px-1 md:px-6 py-4 w-1/3'>商品分類</td>
-                    <td className='px-1 md:px-6 py-4 w-2/3'>
+                  <tr className='border-b hover:bg-white'>
+                    <td className='w-1/3 px-1 py-4 md:px-6'>商品分類</td>
+                    <td className='w-2/3 px-1 py-4 md:px-6'>
                       <Link
                         href={`/product/category/${product.category.id}`}
-                        className='text-indigo-500 hover:text-indigo-700 hover:underline font-bold'
+                        className='font-bold text-indigo-500 hover:text-indigo-700 hover:underline'
                       >
                         {product.category.name}
                       </Link>

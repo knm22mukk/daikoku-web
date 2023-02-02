@@ -25,7 +25,7 @@ export const HeaderMenu: FC = () => {
             open ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <nav className='fixed py-10 container'>
+          <nav className='container fixed py-10'>
             <ul>
               {pageLinks.map((link) => (
                 <li

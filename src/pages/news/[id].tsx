@@ -43,9 +43,9 @@ const NewsId: NextPage<Props> = ({ news }) => {
       />
       <Breadcrumb lists={[{ title: '更新情報', path: '/news' }, { title: news.title }]} />
       <PageHeader subHeading='news' title={news.title} />
-      <div className='container py-16 max-w-7xl'>
+      <div className='container max-w-7xl py-16'>
         <Image src={news.image.url} height={600} width={1280} alt={news.title} />
-        <div className='flex items-center text-gray-500 py-4'>
+        <div className='flex items-center py-4 text-gray-500'>
           <AiOutlineClockCircle className='h-6 w-6' aria-hidden='true' />
           <div className='ml-2 text-2xl font-semibold leading-8'>
             <Date dateString={news.publishedAt} />
@@ -55,7 +55,7 @@ const NewsId: NextPage<Props> = ({ news }) => {
           dangerouslySetInnerHTML={{
             __html: `${news.body}`,
           }}
-          className='py-16 prose lg:prose-lg max-w-none'
+          className='prose max-w-none py-16 lg:prose-lg'
         />
       </div>
     </PageTemplete>

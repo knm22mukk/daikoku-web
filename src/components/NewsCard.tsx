@@ -11,7 +11,7 @@ interface Props {
 
 export const NewsCard: FC<Props> = ({ news }) => {
   return (
-    <div className='max-w-sm bg-white border border-gray-200 rounded-md shadow-md'>
+    <div className='max-w-sm rounded-md border border-gray-200 bg-white shadow-md'>
       <Link href={`/news/${news.id}`}>
         <Image
           src={news.image.url}
@@ -22,7 +22,7 @@ export const NewsCard: FC<Props> = ({ news }) => {
         />
       </Link>
       <div className='p-5'>
-        <div className='my-3 italic font-semibold text-gray-600'>
+        <div className='my-3 font-semibold italic text-gray-600'>
           <Date dateString={news.publishedAt} />
         </div>
         <Link

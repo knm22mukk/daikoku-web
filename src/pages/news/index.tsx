@@ -32,8 +32,8 @@ const NewsIndex: NextPage<Props> = ({ news }) => {
       />
       <Breadcrumb lists={[{ title: '更新情報' }]} />
       <PageHeader subHeading='news' title='更新情報' />
-      <div className='container py-16 max-w-7xl'>
-        <div className='grid gap-4 py-16 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 place-content-center sm:place-items-stretch'>
+      <div className='container max-w-7xl py-16'>
+        <div className='grid place-content-center gap-4 py-16 sm:grid-cols-2 sm:place-items-stretch lg:grid-cols-3 2xl:grid-cols-4'>
           {news.map((news) => (
             <NewsCard key={news.id} news={news} />
           ))}

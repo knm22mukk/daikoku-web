@@ -31,81 +31,81 @@ const Contact: NextPage = () => {
       />
       <Breadcrumb lists={[{ title: 'お問い合わせ' }]} />
       <PageHeader subHeading='contact' title='お問い合わせ' />
-      <div className='py-16 container max-w-7xl'>
-        <p className='mb-8 font-light text-center text-gray-500'>
+      <div className='container max-w-7xl py-16'>
+        <p className='mb-8 text-center font-light text-gray-500'>
           お問い合わせがありましたらお気軽にこちらからご連絡下さい。
           <br />
           お問い合わせから2、3日以内にご返信させていただきます。
         </p>
-        <form className='space-y-8 max-w-lg mx-auto' onSubmit={handleSubmit}>
+        <form className='mx-auto max-w-lg space-y-8' onSubmit={handleSubmit}>
           <div>
             <label className='mb-2 text-sm font-medium'>
-              会社名<span className='text-red-500 ml-1'>*</span>
+              会社名<span className='ml-1 text-red-500'>*</span>
             </label>
             <input
               type='text'
               value={company}
               onChange={(e) => setCompany(e.target.value)}
-              className='shadow-sm border border-gray-300 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 w-full p-3'
+              className='w-full rounded-lg border border-gray-300 p-3 text-sm shadow-sm focus:border-indigo-500 focus:ring-indigo-500'
               required
             />
           </div>
           <div>
             <label className='mb-2 text-sm font-medium'>
-              お名前<span className='text-red-500 ml-1'>*</span>
+              お名前<span className='ml-1 text-red-500'>*</span>
             </label>
             <input
               type='text'
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className='shadow-sm border border-gray-300 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 w-full p-3'
+              className='w-full rounded-lg border border-gray-300 p-3 text-sm shadow-sm focus:border-indigo-500 focus:ring-indigo-500'
               required
             />
           </div>
           <div>
             <label className='mb-2 text-sm font-medium'>
-              メールアドレス<span className='text-red-500 ml-1'>*</span>
+              メールアドレス<span className='ml-1 text-red-500'>*</span>
             </label>
             <input
               type='email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className='shadow-sm border border-gray-300 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 w-full p-3'
+              className='w-full rounded-lg border border-gray-300 p-3 text-sm shadow-sm focus:border-indigo-500 focus:ring-indigo-500'
               required
             />
           </div>
           <div>
             <label className='mb-2 text-sm font-medium'>
-              ご住所<span className='text-red-500 ml-1'>*</span>
+              ご住所<span className='ml-1 text-red-500'>*</span>
             </label>
             <input
               type='address'
               value={address}
               onChange={(e) => setAddress(e.target.value)}
-              className='shadow-sm border border-gray-300 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 w-full p-3'
+              className='w-full rounded-lg border border-gray-300 p-3 text-sm shadow-sm focus:border-indigo-500 focus:ring-indigo-500'
               required
             />
           </div>
           <div>
             <label className='mb-2 text-sm font-medium'>
-              お電話番号<span className='text-red-500 ml-1'>*</span>
+              お電話番号<span className='ml-1 text-red-500'>*</span>
             </label>
             <input
               type='tel'
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className='shadow-sm border border-gray-300 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 w-full p-3'
+              className='w-full rounded-lg border border-gray-300 p-3 text-sm shadow-sm focus:border-indigo-500 focus:ring-indigo-500'
               required
             />
           </div>
           <div>
             <label className='mb-2 text-sm font-medium'>
-              メッセージ<span className='text-red-500 ml-1'>*</span>
+              メッセージ<span className='ml-1 text-red-500'>*</span>
             </label>
             <textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className='shadow-sm border border-gray-300 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 w-full p-3'
+              className='w-full rounded-lg border border-gray-300 p-3 text-sm shadow-sm focus:border-indigo-500 focus:ring-indigo-500'
               required
               rows={5}
             ></textarea>

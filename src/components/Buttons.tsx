@@ -9,7 +9,7 @@ export const BaseButton: FC<Props> = ({ children, type }) => {
   return (
     <button
       type={type}
-      className='text-white bg-blue-500 hover:bg-blue-700 font-bold rounded-lg text-xl px-10 py-4'
+      className='rounded-lg bg-blue-500 px-10 py-4 text-xl font-bold text-white hover:bg-blue-700'
     >
       {children}
     </button>
@@ -20,7 +20,7 @@ export const OutlineButton: FC<Props> = ({ children, type }) => {
   return (
     <button
       type={type}
-      className='text-blue-600 hover:text-white border border-blue-600 hover:bg-blue-600 font-bold rounded-lg text-xl px-10 py-4'
+      className='rounded-lg border border-blue-600 px-10 py-4 text-xl font-bold text-blue-600 hover:bg-blue-600 hover:text-white'
     >
       {children}
     </button>
