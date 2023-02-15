@@ -20,7 +20,7 @@ export const ProductFeatures: FC = () => {
                 <br className='hidden md:block' />
                 さまざまな商品を取り扱っています
               </h2>
-              <p className='text-base text-gray-700 md:text-lg'>
+              <p className='text-base md:text-lg'>
                 おしぼりやナプキンなどをはじめとした紙製品、パルプモールドやFSC認証紙を使用した環境配慮型製品、マスクや手袋などの感染対策商品など幅広く取り扱いをしています。
               </p>
             </div>

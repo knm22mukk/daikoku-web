@@ -59,7 +59,7 @@ const ProductIndex: NextPage<Props> = ({ categories }) => {
                     className='rounded-full'
                   />
                 )}
-                <span className='flex justify-center font-bold text-gray-700'>{category.name}</span>
+                <span className='flex justify-center font-bold'>{category.name}</span>
               </Link>
             </li>
           ))}

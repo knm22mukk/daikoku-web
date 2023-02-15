@@ -40,7 +40,7 @@ const Recruit: NextPage = () => {
                 <AiOutlineCheck className='h-14 w-14' />
               </div>
               <div className='grow'>
-                <h2 className='mb-3 text-lg font-bold text-gray-800'>新卒採用</h2>
+                <h2 className='mb-3 text-lg font-bold'>新卒採用</h2>
                 <p className='text-base leading-relaxed'>
                   新卒採用に関する情報はマイナビ2023にて詳しく掲載を行なっております。詳細は下記リンクから内容ご覧ください。ご応募お待ちしております。
                 </p>
@@ -60,7 +60,7 @@ const Recruit: NextPage = () => {
                 <AiOutlineCheck className='h-14 w-14' />
               </div>
               <div className='grow'>
-                <h2 className='mb-3 text-lg font-bold text-gray-800'>中途採用</h2>
+                <h2 className='mb-3 text-lg font-bold'>中途採用</h2>
                 <p className='text-base leading-relaxed'>
                   各営業所にて中途採用を積極的に行なっております。ご興味のある方はお問合せフォームよりご連絡をお願いいたします。後日選考について詳しくご案内をさせていただきます。
                 </p>
@@ -75,7 +75,7 @@ const Recruit: NextPage = () => {
                 <AiOutlineCheck className='h-14 w-14' />
               </div>
               <div className='grow'>
-                <h2 className='mb-3 text-lg font-bold text-gray-800'>パート・アルバイト</h2>
+                <h2 className='mb-3 text-lg font-bold'>パート・アルバイト</h2>
                 <p className='text-base leading-relaxed'>
                   配送センター、工場で働くパート・アルバイトの方の募集も行っております。詳しくはお問合せフォームからご連絡をお願いいたします。{' '}
                 </p>

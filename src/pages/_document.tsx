@@ -21,7 +21,7 @@ class MyDocument extends Document {
           <meta name='mobile-web-app-capable' content='yes' />
           <meta name='theme-color' content='#16a34a' />
         </Head>
-        <body className='bg-gray-50 text-gray-900'>
+        <body className='bg-gray-50 text-gray-700'>
           <Main />
           <NextScript />
         </body>

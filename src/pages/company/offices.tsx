@@ -30,7 +30,7 @@ const offices: NextPage = () => {
             </h3>
             <div className='relative overflow-x-auto'>
               <table className='w-full text-left text-sm text-gray-500'>
-                <thead className='bg-gray-50 text-lg uppercase text-gray-700'>
+                <thead className='bg-gray-50 text-lg uppercase'>
                   <tr>
                     <th className='w-1/4 px-1 py-3 md:px-6'>名称</th>
                     <th className='w-1/2 px-1 py-3 md:px-6'>住所</th>
