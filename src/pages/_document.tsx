@@ -20,6 +20,7 @@ class MyDocument extends Document {
           <meta name='format-detection' content='telephone=no' />
           <meta name='mobile-web-app-capable' content='yes' />
           <meta name='theme-color' content='#16a34a' />
+          <meta name='robots' content='noindex' />
         </Head>
         <body className='bg-gray-50 text-gray-700'>
           <Main />
